@@ -6,7 +6,7 @@ import plotly.express as px
 import os
 import seaborn as sns
 
-dataset=pd.read_excel('order_payment_dataset.xlsx')
+dataset=pd.read_excel('data/order_payment_dataset.xlsx')
 
 st.set_page_config(page_title="Order Payment analysis",layout="wide")
 
