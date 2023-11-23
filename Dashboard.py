@@ -9,14 +9,10 @@ import seaborn as sns
 
 #dataset = pd.read_excel('Dicoding-project-order-payment-dashboard.xlsx')
 #Load our dataset
+
 def load_data(data):
         df = pd.read_excel(data)
         return df
-
-#Call the function to load the data
-
-#dataset = load_data('order_payment_dataset.xlsx')        
-
 
 
 st.set_page_config(page_title="Order Payment analysis",layout="wide")
