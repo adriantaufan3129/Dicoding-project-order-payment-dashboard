@@ -10,12 +10,12 @@ import seaborn as sns
 #dataset = pd.read_excel('Dicoding-project-order-payment-dashboard.xlsx')
 #Load our dataset
 def load_data(data):
-        dataset = pd.read_excel(data)
-        return dataset
+        df = pd.read_excel(data)
+        return df
 
 #Call the function to load the data
 
-dataset = load_data('order_payment_dataset.xlsx')        
+#dataset = load_data('order_payment_dataset.xlsx')        
 
 
 
@@ -24,8 +24,8 @@ st.set_page_config(page_title="Order Payment analysis",layout="wide")
 st.sidebar.header("filter By:")
 
 payment_type=st.sidebar.multiselect("payment_type",
-                                 options = dataset["payment_type"].unique(),
-                                 default=dataset["payment_type"].unique())
+                                 options = df["payment_type"].unique(),
+                                 default=df["payment_type"].unique())
 
 selection_query=dataset.query(
     "payment_type== @payment_type"
@@ -94,7 +94,7 @@ with col1:
 with col2:
     fig, ax = plt.subplots()
     sns.scatterplot(x=x_axis, y=y_axis, hue=c_axis,
-                   data=dataset)
+                   data=df)
     st.pyplot(fig)
     #sns.scatterplot(x=dataset[x_axis], y=dataset[y_axis], hue=dataset[c_axis], palette='viridis', s=60)
     #plt.title('Scatter Plot for E-Commerce Order Payment Sequential')
