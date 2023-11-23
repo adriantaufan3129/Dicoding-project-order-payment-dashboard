@@ -6,10 +6,6 @@ import plotly.express as px
 import os
 import seaborn as sns
 
-
-#dataset = pd.read_excel('Dicoding-project-order-payment-dashboard.xlsx')
-#Load our dataset
-
 def load_data(data):
         df = pd.read_excel(data)
         return df
