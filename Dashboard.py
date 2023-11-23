@@ -10,7 +10,7 @@ import seaborn as sns
 #dataset = pd.read_excel('Dicoding-project-order-payment-dashboard.xlsx')
 #Load our dataset
 def load_data(data):
-        dataset = pd.read_excel('data)
+        dataset = pd.read_excel(data)
         return dataset
 
 #Call the function to load the data
